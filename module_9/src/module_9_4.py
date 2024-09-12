@@ -90,11 +90,14 @@
     Наверное
 
 """
-
 from __future__ import absolute_import
+# from .__init__ import main
+from codecs import open
+from os import path
 
 __author__ = 'Sergey Romanov'
 __version__ = '1.0.001'
+
 RSL_DEBUG = False
 
 first = 'Мама мыла раму'
@@ -146,10 +149,20 @@ class MysticBall :
 
 
 first_ball = MysticBall (
-        'Да', 'Без сомнений', 'Думаю нет', 'Спросите снова', 'Спросите позже',
-        'Шансы хорошие', 'Мало шансов', 'Точно да', 'Очень вероятно',
+        'Без сомнений',
+        'Возможно',
+        'Да',
+        'Думаю нет',
+        'Мало шансов',
         'Не могу сказать',
-        'Неясно', 'Возможно', 'Не сейчас', 'Нет'
+        'Не сейчас',
+        'Нет'
+        'Неясно',
+        'Очень вероятно',
+        'Спросите позже',
+        'Спросите снова',
+        'Точно да',
+        'Шансы хорошие',
         )
 
 print ( first_ball ( ) )
@@ -166,6 +179,7 @@ def main ( *args, **kwargs ) :
 
     if RSL_DEBUG :
         print ( f'--->> Author module:\t\t{__author__}.' )
+        print ( f'--->>Version:\t\t{__version__}.' )
     else :
         return result_
 
