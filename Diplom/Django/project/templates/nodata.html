@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div id="nodata_out">
+    <div id="nodata_content">
+        <div class="nodata">Нет данных для отображения</div>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer_menu %}
+<div id="bottom_menu" class="menu">
+    <div class="menu_item"><a href="/" id="back_button">Назад</a></div>
+</div>
+<script>
+    document.getElementById('back_button').addEventListener('click', function(event) {
+        event.preventDefault(); // предотвращаем переход по ссылке
+        window.history.back();  // выполняем действие "Назад"
+    });
+</script>
+{% endblock %}
